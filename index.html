@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="ApexCare Health Center - World-class medical care, emergency response, 150+ board-certified specialists, telehealth, and state-of-the-art facilities.">
+    <meta name="keywords"
+        content="hospital, healthcare, medical center, doctors, cardiology, emergency room, telehealth, appointment booking">
+    <title>ApexCare Health Center | World-Class Medical Excellence</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.js">
+
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 1. Top Emergency Alert Bar -->
+    <div class="top-emergency-bar">
+        <div class="container top-bar-content">
+            <div class="emergency-info">
+                <span class="pulse-dot"></span>
+                <strong>24/7 Trauma Hotline:</strong>
+                <span>1-800-APEX-CARE (1-800-273-9227)</span>
+            </div>
+            <div class="top-bar-actions">
+                <span>📍 450 Health Innovation Way, Medical District</span>
+                <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle Theme">
+                    <span id="themeIcon">🌙</span>
+                    <span id="themeText">Dark Mode</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Header & Main Navbar -->
+    <header class="navbar">
+        <div class="container navbar-container">
+            <a href="#" class="logo" aria-label="ApexCare Health Homepage">
+                <div class="logo-icon">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+                    </svg>
+                </div>
+                <span>ApexCare<span class="text-gradient">Health</span></span>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#departments" class="nav-link">Departments</a>
+                <a href="#doctors" class="nav-link">Specialists</a>
+                <a href="#testimonials" class="nav-link">Patient Portal</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-cta">
+                <button class="btn btn-primary js-open-appointment" id="headerBookBtn">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    <span>Book Appointment</span>
+                </button>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="badge badge-primary">✨ Top Ranked Regional Medical Center 2026</span>
+                <h1 class="hero-title">Precision Medicine. <span class="text-gradient">Compassionate Care.</span></h1>
+                <p class="hero-subtitle">Experience next-generation healthcare powered by top medical specialists,
+                    cutting-edge surgical technology, and 24/7 dedicated emergency support.</p>
+
+                <div class="hero-actions">
+                    <button class="btn btn-primary js-open-appointment">
+                        <span>Schedule Consultation</span>
+                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </button>
+                    <a href="#doctors" class="btn btn-secondary">Find a Specialist</a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">99.8%</div>
+                        <div class="stat-label">Patient Satisfaction</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label">Board Specialists</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Emergency Care</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-image-wrapper">
+                    <img src="hero_medical_team.png" alt="ApexCare Medical Specialists Team" class="hero-image">
+                </div>
+
+                <!-- Floating Glass Feature Cards -->
+                <div class="floating-card floating-card-1">
+                    <div class="fc-icon fc-icon-success">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="fc-title">Instant Telehealth</div>
+                        <div class="fc-desc">Virtual visits in < 15 mins</div>
+                        </div>
+                    </div>
+
+                    <div class="floating-card floating-card-2">
+                        <div class="fc-icon fc-icon-primary">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="fc-title">50,000+ Lives Saved</div>
+                            <div class="fc-desc">Advanced cardiac unit</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- 4. Quick Actions / Core Services Grid -->
+    <section class="quick-services" id="services">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-card js-open-appointment">
+                    <div class="service-icon-box">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Emergency Care</h3>
+                    <p class="service-desc">Level 1 Trauma Center equipped for instant emergency response with zero
+                        queue wait times.</p>
+                    <span class="service-link">Call Emergency Hotline &rarr;</span>
+                </div>
+
+                <div class="service-card" onclick="location.href='#doctors'">
+                    <div class="service-icon-box">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Find Specialists</h3>
+                    <p class="service-desc">Browse our network of top surgeons, cardiologists, neurologists, and
+                        pediatricians.</p>
+                    <span class="service-link">Explore Specialists &rarr;</span>
+                </div>
+
+                <div class="service-card js-open-appointment">
+                    <div class="service-icon-box">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Virtual Telehealth</h3>
+                    <p class="service-desc">Secure HD video consultations with your physician from the comfort of home.
+                    </p>
+                    <span class="service-link">Start Telehealth Session &rarr;</span>
+                </div>
+
+                <div class="service-card" onclick="document.getElementById('aiWidgetBtn').click()">
+                    <div class="service-icon-box">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L5.6 15.12a2 2 0 01-1.023-.547l-1.12-1.12a2 2 0 010-2.828l1.12-1.12a2 2 0 011.023-.547l2.387-.477a6 6 0 003.86-.517l.318-.158a6 6 0 013.86-.517l2.387.477a2 2 0 011.022.547l1.12 1.12a2 2 0 010 2.828l-1.12 1.12z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">AI Symptom Assistant</h3>
+                    <p class="service-desc">Instant triage and preliminary evaluation powered by medical AI guidance.
+                    </p>
+                    <span class="service-link">Launch AI Assistant &rarr;</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Interactive Departments Section (Tabbed Layout) -->
+    <section class="departments-section" id="departments">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Clinical Excellence</span>
+                <h2 class="section-title">Specialized Medical Departments</h2>
+                <p class="section-description">Equipped with 4th-generation robotic surgical systems and comprehensive
+                    multi-disciplinary care teams.</p>
+            </div>
+
+            <div class="dept-tabs">
+                <button class="dept-tab-btn active" data-dept="cardiology">🫀 Cardiology</button>
+                <button class="dept-tab-btn" data-dept="neurology">🧠 Neurology</button>
+                <button class="dept-tab-btn" data-dept="pediatrics">👶 Pediatrics</button>
+                <button class="dept-tab-btn" data-dept="orthopedics">🦴 Orthopedics</button>
+                <button class="dept-tab-btn" data-dept="oncology">🔬 Oncology</button>
+            </div>
+
+            <div class="dept-panels">
+                <!-- Cardiology Panel -->
+                <div class="dept-content-panel active" id="dept-cardiology">
+                    <div class="dept-panel-grid">
+                        <div class="dept-info">
+                            <h3>Advanced Cardiovascular Institute</h3>
+                            <p>Our Cardiology department offers comprehensive diagnostic, interventional, and surgical
+                                care for all heart conditions, supported by a 24/7 Cardiac Catheterization Lab.</p>
+                            <div class="dept-features">
+                                <div class="dept-feature-item">
+                                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span>3D Cardiac Mapping</span>
+                                </div>
+                                <div class="dept-feature-item">
+                                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span>Minimally Invasive TAVR</span>
+                                </div>
+                                <div class="dept-feature-item">
+                                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span>Heart Failure Rehabilitation</span>
+                                </div>
+                                <div class="dept-feature-item">
+                                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span>24/7 Chest Pain ER</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary js-open-appointment" data-doctor="Dr. Elena Rostova">Book
+                                Cardiology Appointment</button>
+                        </div>
+                        <img src="doctor_portrait.png" alt="Cardiology Specialist" class="dept-image">
+                    </div>
+                </div>
+
+                <!-- Neurology Panel -->
+                <div class="dept-content-panel" id="dept-neurology">
+                    <div class="dept-panel-grid">
+                        <div class="dept-info">
+                            <h3>Neurological Sciences & Stroke Center</h3>
+                            <p>State-of-the-art neuro-imaging and intraoperative MRI system for brain and spine care,
+                                certified as a Comprehensive Stroke Center.</p>
+                            <div class="dept-features">
+                                <div class="dept-feature-item"><svg width="18" height="18" fill="none"
+                                        stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                                    </svg><span>Intraoperative Neuro MRI</span></div>
+                                <div class="dept-feature-item"><svg width="18" height="18" fill="none"
+                                        stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                                    </svg><span>Epilepsy & Seizure Unit</span></div>
+                                <div class="dept-feature-item"><svg width="18" height="18" fill="none"
+                                        stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                                    </svg><span>Spine Minimally Invasive Surgery</span></div>
+                                <div class="dept-feature-item"><svg width="18" height="18" fill="none"
+                                        stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                                    </svg><span>Stroke Response Team</span></div>
+                            </div>
+                            <button class="btn btn-primary js-open-appointment" data-doctor="Dr. Marcus Vance">Book
+                                Neurology Appointment</button>
+                        </div>
+                        <img src="hospital_facility.png" alt="Neurology Tech" class="dept-image">
+                    </div>
+                </div>
+
+                <!-- Pediatrics Panel -->
+                <div class="dept-content-panel" id="dept-pediatrics">
+                    <div class="dept-panel-grid">
+                        <div class="dept-info">
+                            <h3>Children's Health Pavilion</h3>
+                            <p>Dedicated pediatric intensive care (PICU) with child-friendly amenities, specialized
+                                pediatric surgeons, and adolescent health specialists.</p>
+                            <div class="dept-features">
+                                <div class="dept-feature-item"><svg width="18" height="18" fill="none"
+                                        stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                                    </svg><span>24/7 Pediatric ER</span></div>
+                                <div class="dept-feature-item"><svg width="18" height="18" fill="none"
+                                        stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                                    </svg><span>Neonatal ICU (Level IV)</span></div>
+                                <div class="dept-feature-item"><svg width="18" height="18" fill="none"
+                                        stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                                    </svg><span>Child Life Specialists</span></div>
+                                <div class="dept-feature-item"><svg width="18" height="18" fill="none"
+                                        stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                                    </svg><span>Pediatric Cardiology</span></div>
+                            </div>
+                            <button class="btn btn-primary js-open-appointment" data-doctor="Dr. Sarah Lin">Book
+                                Pediatric Consultation</button>
+                        </div>
+                        <img src="hero_medical_team.png" alt="Pediatric Team" class="dept-image">
+                    </div>
+                </div>
+
+                <!-- Orthopedics Panel -->
+                <div class="dept-content-panel" id="dept-orthopedics">
+                    <div class="dept-panel-grid">
+                        <div class="dept-info">
+                            <h3>Orthopedic & Joint Reconstruction Institute</h3>
+                            <p>Pioneers in robotic joint replacement surgery, sports medicine, and spinal injury
+                                restoration with rapid rehabilitation programs.</p>
+                            <div class="dept-features">
+                                <div class="dept-feature-item"><svg width="18" height="18" fill="none"
+                                        stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                                    </svg><span>Mako Robotic Arm Knee/Hip</span></div>
+                                <div class="dept-feature-item"><svg width="18" height="18" fill="none"
+                                        stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                                    </svg><span>Sports Injury Therapy</span></div>
+                            </div>
+                            <button class="btn btn-primary js-open-appointment" data-doctor="Dr. David Miller">Book
+                                Orthopedic Appointment</button>
+                        </div>
+                        <img src="doctor_portrait.png" alt="Orthopedic Specialist" class="dept-image">
+                    </div>
+                </div>
+
+                <!-- Oncology Panel -->
+                <div class="dept-content-panel" id="dept-oncology">
+                    <div class="dept-panel-grid">
+                        <div class="dept-info">
+                            <h3>Comprehensive Cancer Center</h3>
+                            <p>Targeted immunotherapy, precision radiation oncology, and compassionate cancer support
+                                services personalized for every patient.</p>
+                            <div class="dept-features">
+                                <div class="dept-feature-item"><svg width="18" height="18" fill="none"
+                                        stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                                    </svg><span>Proton Beam Therapy</span></div>
+                                <div class="dept-feature-item"><svg width="18" height="18" fill="none"
+                                        stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                                    </svg><span>Gene Sequencing Lab</span></div>
+                            </div>
+                            <button class="btn btn-primary js-open-appointment">Book Oncology Consultation</button>
+                        </div>
+                        <img src="hospital_facility.png" alt="Oncology Center" class="dept-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Specialist Doctor Directory & Real-time Filter -->
+    <section class="doctors-section" id="doctors">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Specialists</span>
+                <h2 class="section-title">Meet Our Leading Physicians</h2>
+                <p class="section-description">World-renowned medical leaders committed to providing exceptional care.
+                </p>
+            </div>
+
+            <!-- Toolbar & Search -->
+            <div class="filter-toolbar">
+                <div class="search-input-wrapper">
+                    <svg class="search-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" id="doctorSearch"
+                        placeholder="Search doctor by name, specialty, or condition...">
+                </div>
+
+                <div class="filter-chips">
+                    <button class="chip active" data-category="all">All Departments</button>
+                    <button class="chip" data-category="cardiology">Cardiology</button>
+                    <button class="chip" data-category="neurology">Neurology</button>
+                    <button class="chip" data-category="pediatrics">Pediatrics</button>
+                    <button class="chip" data-category="orthopedics">Orthopedics</button>
+                </div>
+            </div>
+
+            <!-- Doctors Grid -->
+            <div class="doctors-grid" id="doctorsGrid">
+                <!-- Doctor 1 -->
+                <div class="doctor-card" data-name="Dr. Elena Rostova" data-dept="cardiology"
+                    data-specialty="Interventional Cardiology">
+                    <div class="doctor-avatar-wrapper">
+                        <img src="doctor_portrait.png" alt="Dr. Elena Rostova" class="doctor-avatar">
+                        <span class="doctor-rating">★ 4.9 (128)</span>
+                    </div>
+                    <div class="doctor-body">
+                        <span class="doctor-dept">Cardiology</span>
+                        <h3 class="doctor-name">Dr. Elena Rostova, MD</h3>
+                        <div class="doctor-meta">
+                            <span>14+ Years Experience • Harvard Fellow</span>
+                            <span class="doctor-slot">🟢 Available Today, 2:30 PM</span>
+                        </div>
+                        <button class="btn btn-outline-primary doctor-btn js-open-appointment"
+                            data-doctor="Dr. Elena Rostova">Book Consultation</button>
+                    </div>
+                </div>
+
+                <!-- Doctor 2 -->
+                <div class="doctor-card" data-name="Dr. Marcus Vance" data-dept="neurology"
+                    data-specialty="Neurosurgery & Spine">
+                    <div class="doctor-avatar-wrapper">
+                        <img src="hero_medical_team.png" alt="Dr. Marcus Vance" class="doctor-avatar">
+                        <span class="doctor-rating">★ 4.9 (94)</span>
+                    </div>
+                    <div class="doctor-body">
+                        <span class="doctor-dept">Neurology</span>
+                        <h3 class="doctor-name">Dr. Marcus Vance, MD</h3>
+                        <div class="doctor-meta">
+                            <span>18+ Years Experience • Johns Hopkins</span>
+                            <span class="doctor-slot">🟢 Available Tomorrow, 10:00 AM</span>
+                        </div>
+                        <button class="btn btn-outline-primary doctor-btn js-open-appointment"
+                            data-doctor="Dr. Marcus Vance">Book Consultation</button>
+                    </div>
+                </div>
+
+                <!-- Doctor 3 -->
+                <div class="doctor-card" data-name="Dr. Sarah Lin" data-dept="pediatrics"
+                    data-specialty="Pediatric Surgery">
+                    <div class="doctor-avatar-wrapper">
+                        <img src="doctor_portrait.png" alt="Dr. Sarah Lin" class="doctor-avatar">
+                        <span class="doctor-rating">★ 5.0 (210)</span>
+                    </div>
+                    <div class="doctor-body">
+                        <span class="doctor-dept">Pediatrics</span>
+                        <h3 class="doctor-name">Dr. Sarah Lin, MD</h3>
+                        <div class="doctor-meta">
+                            <span>11+ Years Experience • Stanford Medicine</span>
+                            <span class="doctor-slot">🟢 Available Today, 4:00 PM</span>
+                        </div>
+                        <button class="btn btn-outline-primary doctor-btn js-open-appointment"
+                            data-doctor="Dr. Sarah Lin">Book Consultation</button>
+                    </div>
+                </div>
+
+                <!-- Doctor 4 -->
+                <div class="doctor-card" data-name="Dr. David Miller" data-dept="orthopedics"
+                    data-specialty="Joint Replacement">
+                    <div class="doctor-avatar-wrapper">
+                        <img src="hospital_facility.png" alt="Dr. David Miller" class="doctor-avatar">
+                        <span class="doctor-rating">★ 4.8 (87)</span>
+                    </div>
+                    <div class="doctor-body">
+                        <span class="doctor-dept">Orthopedics</span>
+                        <h3 class="doctor-name">Dr. David Miller, MD</h3>
+                        <div class="doctor-meta">
+                            <span>16+ Years Experience • Mayo Clinic</span>
+                            <span class="doctor-slot">🟢 Available Wed, 9:00 AM</span>
+                        </div>
+                        <button class="btn btn-outline-primary doctor-btn js-open-appointment"
+                            data-doctor="Dr. David Miller">Book Consultation</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Emergency Callout Banner -->
+    <div class="container">
+        <section class="emergency-banner">
+            <div class="container emergency-banner-content">
+                <div>
+                    <span class="badge badge-danger">24/7 Instant Dispatch</span>
+                    <h2 class="eb-title">Experiencing a Medical Emergency?</h2>
+                    <p class="eb-desc">Our Level-1 Emergency Trauma team is on standby 24/7 with mobile ICU ambulances
+                        dispatched within minutes.</p>
+                </div>
+                <div class="eb-actions">
+                    <a href="tel:18002739227" class="btn btn-danger">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                            </path>
+                        </svg>
+                        <span>Call 1-800-APEX-CARE</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 8. Patient Testimonials & Stories -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Real Patient Stories</span>
+                <h2 class="section-title">Trusted by Over 100,000 Families</h2>
+                <p class="section-description">See why patients across the country entrust their care to ApexCare
+                    Health.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars-row">★★★★★</div>
+                    <p class="testimonial-quote">"The emergency team at ApexCare saved my father's life during a cardiac
+                        stroke. From the ambulance crew to Dr. Rostova in surgery, their speed and skill were
+                        remarkable."</p>
+                    <div class="patient-profile">
+                        <div class="patient-avatar">JL</div>
+                        <div>
+                            <div class="patient-name">James Lancaster</div>
+                            <div class="patient-tag">Verified Cardiac Patient</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars-row">★★★★★</div>
+                    <p class="testimonial-quote">"My robotic knee replacement with Dr. Miller allowed me to hike again
+                        within 6 weeks. The digital patient portal and virtual check-ins made recovery seamless."</p>
+                    <div class="patient-profile">
+                        <div class="patient-avatar">EM</div>
+                        <div>
+                            <div class="patient-name">Elena Martinez</div>
+                            <div class="patient-tag">Orthopedic Surgery Patient</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars-row">★★★★★</div>
+                    <p class="testimonial-quote">"The pediatric wing is extraordinary. Dr. Lin made my 6-year-old
+                        daughter feel completely safe before her procedure. Truly compassionate healthcare."</p>
+                    <div class="patient-profile">
+                        <div class="patient-avatar">RT</div>
+                        <div>
+                            <div class="patient-name">Robert Taylor</div>
+                            <div class="patient-tag">Pediatric Care Parent</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Contact & Hours Section -->
+    <section class="contact-section" id="contact">
+        <div class="container contact-grid">
+            <div class="contact-card">
+                <span class="badge badge-primary" style="margin-bottom: 1rem;">Hours & Location</span>
+                <h3 style="font-size: 1.75rem; font-weight: 800; margin-bottom: 1rem;">Visit ApexCare Health</h3>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem;">450 Health Innovation Way, Suite
+                    100<br>Medical District, NY 10001</p>
+
+                <h4 style="font-size: 1.1rem; font-weight: 700; margin-top: 1.5rem;">Operating Hours</h4>
+                <table class="hours-table">
+                    <tr>
+                        <td>Emergency Care & ICU</td>
+                        <td>24 Hours / 7 Days</td>
+                    </tr>
+                    <tr>
+                        <td>Outpatient Specialty Clinics</td>
+                        <td>Mon - Fri: 7:00 AM - 8:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Diagnostic Imaging & Lab</td>
+                        <td>Mon - Sat: 6:00 AM - 9:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Visiting Hours</td>
+                        <td>Daily: 9:00 AM - 8:00 PM</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="contact-card">
+                <h3 style="font-size: 1.75rem; font-weight: 800; margin-bottom: 0.5rem;">Send Us a Message</h3>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Have questions about our services or
+                    insurance coverage? Get in touch.</p>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cName">Full Name *</label>
+                            <input type="text" id="cName" class="form-control" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="cPhone">Phone Number *</label>
+                            <input type="tel" id="cPhone" class="form-control" required placeholder="(555) 000-0000">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cEmail">Email Address *</label>
+                        <input type="email" id="cEmail" class="form-control" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="cMsg">Message or Special Request</label>
+                        <textarea id="cMsg" class="form-control"
+                            placeholder="How can our clinical desk assist you?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">✝</div>
+                        <span>ApexCare<span class="text-gradient">Health</span></span>
+                    </a>
+                    <p class="footer-desc">Setting the global standard for patient-centered clinical care, medical
+                        research, and emergency response excellence.</p>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="#home">Home</a>
+                        <a href="#services">Clinical Services</a>
+                        <a href="#departments">Medical Departments</a>
+                        <a href="#doctors">Physician Directory</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Departments</h4>
+                    <div class="footer-links">
+                        <a href="#departments">Cardiology Institute</a>
+                        <a href="#departments">Neurology & Brain</a>
+                        <a href="#departments">Orthopedic Surgery</a>
+                        <a href="#departments">Pediatric Pavilion</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Accreditation</h4>
+                    <p style="font-size: 0.85rem; line-height: 1.6;">Certified JCI Accredited Hospital • Level 1 Trauma
+                        Center • HIPAA Compliant Digital Portal</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 ApexCare Health Center. All rights reserved.</span>
+                <div style="display: flex; gap: 1.5rem;">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Patient Rights</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 11. Appointment Booking Modal -->
+    <div class="modal-overlay" id="appointmentModal" role="dialog" aria-modal="true">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title">
+                    <span>🗓️ Schedule an Appointment</span>
+                </h3>
+                <button class="modal-close js-close-modal" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="appointmentForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="modalDept">Department *</label>
+                            <select id="modalDept" class="form-control" required>
+                                <option value="Cardiology">Cardiology</option>
+                                <option value="Neurology">Neurology</option>
+                                <option value="Pediatrics">Pediatrics</option>
+                                <option value="Orthopedics">Orthopedics</option>
+                                <option value="General Health">General Checkup</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="modalDoctor">Preferred Doctor</label>
+                            <select id="modalDoctor" class="form-control">
+                                <option value="Dr. Elena Rostova">Dr. Elena Rostova (Cardiology)</option>
+                                <option value="Dr. Marcus Vance">Dr. Marcus Vance (Neurology)</option>
+                                <option value="Dr. Sarah Lin">Dr. Sarah Lin (Pediatrics)</option>
+                                <option value="Dr. David Miller">Dr. David Miller (Orthopedics)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row" style="margin-top: 1rem;">
+                        <div class="form-group">
+                            <label for="modalDate">Select Date *</label>
+                            <input type="date" id="modalDate" class="form-control" required value="2026-08-04">
+                        </div>
+                        <div class="form-group">
+                            <label>Preferred Time Slot</label>
+                            <div class="time-slots">
+                                <button type="button" class="slot-btn selected">09:00 AM</button>
+                                <button type="button" class="slot-btn">11:30 AM</button>
+                                <button type="button" class="slot-btn">02:30 PM</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="margin-top: 1rem;">
+                        <label for="modalName">Patient Full Name *</label>
+                        <input type="text" id="modalName" class="form-control" required
+                            placeholder="e.g. Sarah Jenkins">
+                    </div>
+
+                    <div class="form-row" style="margin-top: 1rem;">
+                        <div class="form-group">
+                            <label for="modalPhone">Phone Number *</label>
+                            <input type="tel" id="modalPhone" class="form-control" required
+                                placeholder="(555) 000-0000">
+                        </div>
+                        <div class="form-group">
+                            <label for="modalEmail">Email Address</label>
+                            <input type="email" id="modalEmail" class="form-control" placeholder="sarah@example.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="margin-top: 1rem;">
+                        <label for="modalReason">Reason for Visit / Symptoms</label>
+                        <textarea id="modalReason" class="form-control"
+                            placeholder="Briefly describe your symptoms or visit purpose..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">Confirm &
+                        Book Appointment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 12. Floating AI Health Assistant Chat Widget -->
+    <div class="ai-widget">
+        <div class="ai-chat-window" id="aiChatWindow">
+            <div class="ai-chat-header">
+                <div class="ai-chat-title">
+                    <span>🤖</span>
+                    <span>ApexCare Health Bot</span>
+                </div>
+                <button class="modal-close" id="closeAiChat" style="color: white;">&times;</button>
+            </div>
+
+            <div class="ai-chat-messages" id="aiChatMessages">
+                <div class="chat-bubble chat-bubble-ai">
+                    Hello! I'm your ApexCare Medical Assistant. How can I help you today?
+                    <div class="ai-chips-wrapper">
+                        <button class="ai-chip-btn">Fever & Headache</button>
+                        <button class="ai-chip-btn">Book Appointment</button>
+                        <button class="ai-chip-btn">Emergency Hotline</button>
+                        <button class="ai-chip-btn">Visiting Hours</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ai-chat-input-area">
+                <input type="text" id="aiChatInput" placeholder="Ask a symptom or question...">
+                <button class="btn btn-primary btn-icon" id="sendAiBtn">➤</button>
+            </div>
+        </div>
+
+        <button class="ai-widget-btn" id="aiWidgetBtn" aria-label="Open AI Assistant">
+            <span>💬</span>
+            <span class="ai-pulse-badge"></span>
+        </button>
+    </div>
+
+    <!-- JavaScript script -->
+    <script src="style.JS"></script>
+</body>
+
+</html>
