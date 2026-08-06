@@ -36,14 +36,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (mobileToggle && navMenu) {
         mobileToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            mobileToggle.setAttribute('aria-expanded', navMenu.classList.contains('active'));
+            const isActive = navMenu.classList.toggle('active');
+            mobileToggle.setAttribute('aria-expanded', isActive);
+            mobileToggle.textContent = isActive ? '✕' : '☰';
+            document.body.style.overflow = isActive ? 'hidden' : '';
         });
 
         // Close menu when clicking links
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
+                mobileToggle.textContent = '☰';
+                document.body.style.overflow = '';
             });
         });
     }
@@ -59,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
             deptTabBtns.forEach(b => b.classList.remove('active'));
             deptPanels.forEach(p => p.classList.remove('active'));
 
-            btn.classList.active = true;
             btn.classList.add('active');
 
             const targetPanel = document.getElementById(`dept-${targetDept}`);
