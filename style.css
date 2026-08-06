@@ -1502,80 +1502,196 @@ textarea.form-control {
     to { opacity: 1; transform: translateX(0); }
 }
 
-/* Responsive Media Queries */
 @media (max-width: 992px) {
-    .hero-grid {
-        grid-template-columns: 1fr;
+    .mobile-toggle {
+        display: block;
+        z-index: 1001;
     }
 
-    .hero-title {
-        font-size: 2.5rem;
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 360px;
+        height: 100vh;
+        background-color: var(--bg-card);
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 6rem 2rem 2rem;
+        box-shadow: var(--shadow-xl);
+        border-left: 1px solid var(--border);
+        transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 999;
     }
 
-    .floating-card-1 {
-        left: 0;
-    }
-
-    .floating-card-2 {
+    /* Active state to slide in drawer */
+    .nav-menu.active {
         right: 0;
     }
 
-    .dept-panel-grid {
+    .nav-link {
+        font-size: 1.1rem;
+        width: 100%;
+        padding: 0.75rem 0;
+    }
+
+    .nav-cta {
+        width: 100%;
+        margin-top: 1.5rem;
+        flex-direction: column;
+    }
+
+    .nav-cta .btn {
+        width: 100%;
+    }
+}
+
+/* --- Large Devices & Tablets (max-width: 1024px) --- */
+@media (max-width: 1024px) {
+    .hero-grid {
         grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .hero-content {
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero-title {
+        font-size: 2.75rem;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-stats {
+        width: 100%;
+        max-width: 600px;
     }
 
     .contact-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
     .footer-grid {
         grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
     }
 }
 
+/* --- Medium Devices & Mobile Landscape (max-width: 768px) --- */
 @media (max-width: 768px) {
-    .nav-menu {
-        position: fixed;
-        top: 4.5rem;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 4.5rem);
-        background-color: var(--bg-card);
-        flex-direction: column;
-        justify-content: flex-start;
-        padding: 2rem;
-        transition: var(--transition);
+    html {
+        font-size: 15px;
     }
 
-    .nav-menu.active {
-        left: 0;
+    .hero {
+        padding: 2.5rem 0;
     }
 
-    .mobile-toggle {
-        display: block;
+    .hero-title {
+        font-size: 2.25rem;
+    }
+
+    .hero-image {
+        height: 360px;
+    }
+
+    .floating-card-1 {
+        top: 5%;
+        left: -0.5rem;
+    }
+
+    .floating-card-2 {
+        bottom: 5%;
+        right: -0.5rem;
+    }
+
+    .section-title {
+        font-size: 1.85rem;
+    }
+
+    .dept-panel-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .dept-features {
+        grid-template-columns: 1fr;
     }
 
     .emergency-banner-content {
         flex-direction: column;
-        align-items: flex-start;
+        text-align: center;
+    }
+
+    .eb-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .eb-actions .btn {
+        width: 100%;
+    }
+
+    .filter-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-input-wrapper {
+        min-width: 100%;
+    }
+
+    .ai-chat-window {
+        right: 0;
+        left: 0;
+        width: calc(100vw - 2rem);
+        bottom: 5rem;
+        margin: 0 auto;
+    }
+}
+
+/* --- Small Mobile Devices (max-width: 480px) --- */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .top-bar-content {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
     }
 
     .form-row {
         grid-template-columns: 1fr;
     }
 
-    .ai-chat-window {
-        width: calc(100vw - 2rem);
-        right: -1rem;
+    .time-slots {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .footer-grid {
         grid-template-columns: 1fr;
     }
 
-    .top-bar-content {
+    .footer-bottom {
         flex-direction: column;
-        gap: 0.35rem;
         text-align: center;
     }
 }
